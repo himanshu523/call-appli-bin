@@ -1,8 +1,9 @@
 var obj ={num:10};
 
-var addToThis = function(a){
-   return this.num+a;
+var arr=[1,2,3];
+var addToThis = function(a,b,c){
+   return this.num+a+b+c;
 }
 
-addToThis.call(obj,1);
-console.log(addToThis.call(obj,1));
+addToThis.apply(obj,arr);
+console.log(addToThis.apply(obj,arr));
