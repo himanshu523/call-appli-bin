@@ -1,9 +1,8 @@
-var obj ={num:10};
+var student ={age:20};
 
-var addToThis = function(a,b,c){
-   return this.num+a+b+c;
+var printAge = function(){
+    return this.age;
 }
 
-var bound =addToThis.bind(obj);
-bound(1,2,3);
-console.log(bound(1,2,3));
+console.log(printAge.call(student));
+
