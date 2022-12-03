@@ -1,7 +1,10 @@
-let multiply = function(x,y)
+let multiply = function(x)
 {
-    console.log(x*y);
+    return function(y)
+    {
+        console.log(x*y);
+    }
 }
 
-let multiplyByTwo =multiply.bind(this,2);
+let multiplyByTwo =multiply(2);
 multiplyByTwo(5);
