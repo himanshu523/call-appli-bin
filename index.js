@@ -1,8 +1,7 @@
-var student ={age:20};
-
-var printAge = function(){
-    return this.age;
+let multiply = function(x,y)
+{
+    console.log(x*y);
 }
 
-console.log(printAge.call(student));
-
+let multiplyByTwo =multiply.bind(this,2);
+multiplyByTwo(5);
